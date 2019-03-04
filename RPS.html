@@ -2,75 +2,16 @@
 <html>
 <head>
 	<title>Rock Paper Scissors!</title>
-
+	<link rel="stylesheet" href="rpsStyles.css">
 </head>
 <body>
-	<script type="text/javascript">
-	game();
-		function computerPlay() 
-		{	let comPlay = "";
-			let val = getRandomInt(3);
-			switch (val) 
-			{
-				case 0:
-					comPlay= "rock";
-				    break;
-				case 1:
-					comPlay= "paper";
-				    break;
-				case 2:
-					comPlay= "scissors";
-					break;
-			}
-			return comPlay;
-		}
 
-		function oneRound(playerSelection, computerSelection)
-		{
-			if(playerSelection == computerSelection)
-			{
-				let result = "It's a tie!, Computer also played "+ computerSelection;
-				return result;
-			}
-				//rock>scissors>paper>rock
-
-			else if(playerSelection == "rock" && computerSelection == "scissors")
-			{
-				let result = "You win! Computer played: "+ computerSelection;
-				return result;
-			}		
-			else if(playerSelection == "scissors" && computerSelection == "paper")
-			{
-				let result = "You win! Computer played: "+ computerSelection;
-				return result;
-			}
-				else if(playerSelection == "paper" && computerSelection == "rock")
-			{
-				let result = "You win! Computer played: "+ computerSelection;
-				return result;
-			}
-			else 
-			{
-				let result = "You lose! Computer played: "+ computerSelection;
-				return result;
-			}
-			
-		}
-		const playerSelection = 'rock'
-		const computerSelection = computerPlay()
-		console.log(oneRound(playerSelection, computerSelection))
-		function getRandomInt(max)
-		{
-  			return Math.floor(Math.random() * Math.floor(max));
-		}
-		function game()
-		{
-			var userPlay = prompt("Rock Paper Scissors?");
-			userPlay.toLowerCase();
-			var comPlay= computerPlay();
-			oneRound(userPlay, comPlay);
-		}
-		//game();
-	</script>
+	<button type="button" onclick="issaRock()">Rock</button>
+	<button type="button" onclick="issaPaper()">Paper</button>
+	<button type="button" onclick="issaKnife()">Scissors</button>
+	<div id='board'>Results will be displayed here</div>
+	<canvas width="673" height="400"></canvas>
+	<script src="rpsScript.js"></script>
+	
 </body>
 </html>
