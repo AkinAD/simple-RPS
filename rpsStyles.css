@@ -1,0 +1,10 @@
+#board {
+	font-size: 24px;
+	font-family: Consolas;
+	font-weight: bold;
+	color : white;
+}
+body {
+	background: url(155173227281280787.png) bottom center;
+	background-color : black;
+}
